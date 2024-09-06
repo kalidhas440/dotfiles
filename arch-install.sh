@@ -35,6 +35,10 @@ rm -rf yay
 
 echo "Yay has been installed successfully!" | tee -a $LOGFILE
 
+echo "Updatin yay" | tee -a $LOGFILE
+yay -Syu --noconfirm 2>$1 tee -a $LOGFILE
+
+
 echo "Installing packages from yay" | tee -a $LOGFILE
 YAY_PACKAGES=("brave-bin" "visual-studio-code-bin" "spotify" "telegram-desktop" "zed" "balena-etcher")
 
@@ -48,7 +52,7 @@ echo "Setting up Configuration files" | tee -a $LOGFILE
 cp -r ~/dotfiles/config/* ~/config 2>> $LOGFILE
 
 echo "Setting up zsh" | tee -a $LOGFILE
-cp ~/dotfiles/config/zshrc ~/.
+cp ~/dotfiles/config/zshrc ~/.zshrc
 
 echo "Installation and setup complete!" | tee -a $LOGFILE
 
