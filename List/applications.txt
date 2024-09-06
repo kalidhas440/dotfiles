@@ -1,0 +1,18 @@
+kitty
+brave-browser
+vscode
+spotify
+telegram-desktop
+thunar,thunar-volman,thunar-archive-plugin
+vlc
+rhytmbox
+mpv
+shotwell
+zed
+file-roller (zip)
+zathura,zathura-pdf-poppler
+gnome-disk-utility
+kdeconnect
+balena-etcher
+nwg-look
+gedit
