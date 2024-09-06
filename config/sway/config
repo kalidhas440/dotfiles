@@ -46,12 +46,13 @@ exec swayidle -w \
 
 ### Input configuration
 
-   input "2:7:SynPS/2_Synaptics_TouchPad" {
-       dwt enabled
-       tap enabled
-       natural_scroll disabled
-       middle_emulation enabled
-   }
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    dwt enabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation enabled 
+    }
+    
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -194,42 +195,58 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-include /etc/sway/config.d/*
-
-#Execs
-bindsym alt+space exec wofi
-exec --no-startup-id /usr/bin/waybar
-exec nm-applet
-exec sleep 10 && kdeconnect-indicator
-bindsym ctrl+alt+delete exec wlogout
-exec diodon
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-bindsym ctrl+alt+f exec thunar
-bindsym ctrl+alt+w exec brave
-bindsym ctrl+alt+v exec code
-bindsym ctrl+alt+s exec spotify
-
 # Disable title bars
 for_window [class="^.*"] border pixel 1
 
-# Functional keys
+#kdeconnect
+exec sleep 5 && kdeconnect-indicator
+    
+#Shortcuts for applications
+    bindsym ctrl+alt+f exec thunar
+    bindsym ctrl+alt+w exec brave
+    bindsym ctrl+alt+v exec code
+    bindsym ctrl+alt+s exec spotify
 
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
+#wlogout (logout menu)
+bindsym ctrl+alt+delete exec wlogout
 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+#Wofi (application menu)
+bindsym alt+space exec wofi
+
+#Waybar (panel)
+exec --no-startup-id /usr/bin/waybar
+
+#NetworkManager-Applet
+exec nm-applet
 
 #Gnome-keyring
-
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,gpg
 
+#Polkit 
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 #Clipboard
-bindsym alt+v exec diodon
+    exec copyq 
+    bindsym alt+v exec copyq
+    
+# Functional keys (Adjust for your own system.Use xev to find key name)
+    #Birghtness Control
+    bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
+    bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
+    
+    #Volume Control
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+    
+    #Mute 
+    bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+    
+    #Screenshot
+    
+    #Uses the screen shot key 'Print' to capture full screen,save to ~/Pictures/Screenshots and copies to clipboard 
+    bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && cat ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1) | wl-copy
+    
+    #Shift+Print will allow you to capture selected area of the window
+    bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && cat ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1) | wl-copy
 
-#Screenshot
-bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && cat ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1) | wl-copy
-bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && cat ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1) | wl-copy
-
+include /etc/sway/config.d/*
