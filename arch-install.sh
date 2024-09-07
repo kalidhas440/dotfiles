@@ -3,7 +3,7 @@
 
 LOGFILE="install_log.txt"
 FAILED_PACKAGES="failed_packages.txt"
-PACKAGES=("kitty" "thunar" "thunar-volman" "thunar-archive-plugin" "vlc" "rhythmbox" "shotwell" "mpv" "gnome-disk-utility" "kdeconnect" "file-roller" "zathura" "zathura-pdf-poppler" "git" "base-devel" "zsh" "waybar" "wlogout" "mako" "wofi" "diodon" "bluez" "bluez-utils" "brightnessctl" "clang" "cmake" "dmidecode" "fzf" "zoxide" "starship" "gedit" "nano" "neovim" "htop" "gnome-keyring" "go" "man-db" "neofetch" "mariadb" "nethogs" "network-manager-applet" "nodejs" "npm" "ntfs-3g" "nwg-look" "nwg-drawer" "openssh" "polkit-gnome" "python-pip" "rustup" "slurp" "sshfs" "subversion" "unzip" "ttf-fonts-awesome" "ttf-nerd-fonts-symbols" "udisks2" "wget" "curl" "wl-clipboard" "wlroots" "xdg-desktop-portal-wlr")
+PACKAGES=("kitty" "thunar" "thunar-volman" "thunar-archive-plugin" "vlc" "rhythmbox" "shotwell" "mpv" "gnome-disk-utility" "kdeconnect" "file-roller" "zathura" "zathura-pdf-poppler" "git" "base-devel" "zsh" "waybar" "wlogout" "mako" "wofi" "copyq" "bluez" "bluez-utils" "brightnessctl" "clang" "cmake" "dmidecode" "fzf" "zoxide" "starship" "gedit" "nano" "neovim" "htop" "gnome-keyring" "go" "man-db" "neofetch" "mariadb" "nethogs" "network-manager-applet" "nodejs" "npm" "ntfs-3g" "nwg-look" "nwg-drawer" "openssh" "polkit-gnome" "python-pip" "rustup" "slurp" "sshfs" "subversion" "unzip" "ttf-fonts-awesome" "ttf-nerd-fonts-symbols" "udisks2" "wget" "curl" "wl-clipboard" "wlroots" "xdg-desktop-portal-wlr")
 
 echo "Listed Applications, utilities, and yay will be installed and config files will be set up automatically" | tee $LOGFILE
 
@@ -53,6 +53,11 @@ cp -r ~/dotfiles/config/* ~/config 2>> $LOGFILE
 
 echo "Setting up zsh" | tee -a $LOGFILE
 cp ~/dotfiles/config/zshrc ~/.zshrc
+
+echo "Finishing Up!"
+sudo pacman -Syu --noconfirm 2>> $LOGFILE
+yay -Syu --noconfirm 2>$1 tee -a $LOGFILE
+
 
 echo "Installation and setup complete!" | tee -a $LOGFILE
 
