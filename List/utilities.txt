@@ -44,3 +44,5 @@ wl-clipboard
 wlroots
 xdg-desktop-portal-wlr
 balena-etcher
+cava
+bpytop
