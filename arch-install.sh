@@ -53,7 +53,7 @@ cp -r ~/dotfiles/config/* ~/config 2>> $LOGFILE
 
 echo "Setting up zsh" | tee -a $LOGFILE
 cp ~/dotfiles/config/zshrc ~/.zshrc
-mkdir -p ~/Pictures/Screenshot
+mkdir -p ~/Pictures/Screenshots
 
 echo "Finishing Up!"
 sudo pacman -Syu --noconfirm 2>> $LOGFILE
