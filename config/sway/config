@@ -206,6 +206,7 @@ exec sleep 5 && kdeconnect-indicator
     bindsym ctrl+alt+w exec brave
     bindsym ctrl+alt+v exec code
     bindsym ctrl+alt+s exec spotify
+    bindsym ctrl+alt+c exec gnome-calculator
 
 #wlogout (logout menu)
 bindsym ctrl+alt+delete exec wlogout
@@ -241,12 +242,13 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
     #Mute 
     bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
     
-    #Screenshot
+    #Screenshot (All screenshot will be saved to ~/Pictures/Screenshots and clipboard)
     
-    #Uses the screen shot key 'Print' to capture full screen,save to ~/Pictures/Screenshots and copies to clipboard 
-    bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && cat ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1) | wl-copy
-    
+    #Uses the screen shot key 'Print' to capture full screen 
+    bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && copyq load ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1)
+
     #Shift+Print will allow you to capture selected area of the window
-    bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && cat ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1) | wl-copy
+    bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png && copyq load ~/Pictures/Screenshots/$(ls -t ~/Pictures/Screenshots/*.png | head -n 1)
+
 
 include /etc/sway/config.d/*
