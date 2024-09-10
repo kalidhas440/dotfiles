@@ -200,13 +200,17 @@ for_window [class="^.*"] border pixel 1
 
 #kdeconnect
 exec sleep 5 && kdeconnect-indicator
-    
+
+#Autostart
+    exec brave
+    exec kitty
+
 #Shortcuts for applications
-    bindsym ctrl+alt+f exec thunar
-    bindsym ctrl+alt+w exec brave
-    bindsym ctrl+alt+v exec code
-    bindsym ctrl+alt+s exec spotify
-    bindsym ctrl+alt+c exec gnome-calculator
+    bindsym alt+f exec thunar
+    bindsym alt+w exec brave
+    bindsym alt+v exec code
+    bindsym alt+s exec spotify
+    bindsym alt+c exec gnome-calculator
 
 #wlogout (logout menu)
 bindsym ctrl+alt+delete exec wlogout
