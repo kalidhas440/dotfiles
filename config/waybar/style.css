@@ -12,21 +12,21 @@ window#waybar {
 
 #workspaces button {
     color: #928374;
-    padding: 0 3px;
+    padding: 0 5px;
     background: transparent;
-    border-bottom: 3px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 #workspaces button.visible {
     color: #fbf1c7;
     background: #282828;
-    border-bottom: 3px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 #workspaces button.focused {
     color: #fbf1c7;
     background: #282828;
-    border-bottom: 3px solid #fbf1c7;
+    border-bottom: 1px solid #fbf1c7;
 }
 
 #clock {
