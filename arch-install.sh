@@ -40,7 +40,7 @@ yay -Syu --noconfirm 2>$1 tee -a $LOGFILE
 
 
 echo "Installing packages from yay" | tee -a $LOGFILE
-YAY_PACKAGES=("brave-bin" "visual-studio-code-bin" "spotify" "telegram-desktop" "zed" "balena-etcher")
+YAY_PACKAGES=("brave-bin" "visual-studio-code-bin" "spotify" "telegram-desktop" "swaylock-fancy-git" "zed" "balena-etcher")
 
 for pkg in "${YAY_PACKAGES[@]}"; do
     if ! yay -S --noconfirm $pkg 2>> $LOGFILE; then
