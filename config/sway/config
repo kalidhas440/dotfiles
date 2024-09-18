@@ -36,9 +36,10 @@ output * bg ~/Pictures/Wallpapers/watch-tower-in-red-forest.png fill
 # Example configuration:
 #
 exec swayidle -w \
-    timeout 300 'swaylock-fancy -p' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock-fancy -p'
+    timeout 300 'env XDG_CURRENT_DESKTOP=sway swaylock-fancy -p' &
+
+exec swayidle -w \
+    timeout 1800 'systemctl suspend'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -50,9 +51,9 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     dwt enabled
     tap enabled
     natural_scroll disabled
-    middle_emulation enabled 
+    middle_emulation enabled
     }
-    
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -89,7 +90,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     #bindsym $mod+$left focus left
     #bindsym $mod+$down focus down
     #bindsym $mod+$up focus up
-    #bindsym $mod+$right focus right  
+    #bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -203,7 +204,7 @@ for_window [class="^.*"] border pixel 1
 exec sleep 5 && kdeconnect-indicator
 
 #Autostart
-    
+
 
 #Shortcuts for applications
     bindsym ctrl+alt+f exec thunar
@@ -230,25 +231,25 @@ exec nm-applet
 #Gnome-keyring
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,gpg
 
-#Polkit 
+#Polkit
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 #Clipboard
-    exec copyq 
+    exec copyq
     bindsym alt+v exec copyq
-    
+
 # Functional keys (Adjust for your own system.Use xev to find key name)
     #Birghtness Control
     bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
     bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
-    
+
     #Volume Control
     bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-    
-    #Mute 
+
+    #Mute
     bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-    
+
     #Screenshot
     bindsym Print exec env XDG_CURRENT_DESKTOP=sway flameshot screen
     bindsym Shift+Print exec env XDG_CURRENT_DESKTOP=sway flameshot gui
