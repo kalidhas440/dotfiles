@@ -27,20 +27,20 @@
     "clock"
   ],
   "mpris": {
-  "ellipsis": "...",
-	"format": "{player_icon} {player}: {artist} - {title}",
-  "artist-len": 20,
-  "title-len": 30,
-	"format-paused": "{player_icon} {player}: {status}",
-	"player-icons": {
-		"default": "🎵",
-    "spotify":"  "
-	},
-	"status-icons": {
-		"paused": "⏸",
-    "playing": "▶"
-	  }
-	// "ignored-players": ["firefox"]
+    "ellipsis": "...",
+    "format": "{player_icon} {player}: {artist} - {title}",
+    "artist-len": 20,
+    "title-len": 30,
+    "format-paused": "{player_icon} {player}: {status}",
+    "player-icons": {
+      "default": "🎵",
+      "spotify": "  "
+    },
+    "status-icons": {
+      "paused": "⏸",
+      "playing": "▶"
+    }
+    // "ignored-players": ["firefox"]
   },
   "network": {
     "interface": "wlo1",
@@ -77,9 +77,9 @@
             ,
             "active": "",
             "default": "" */
-            "special": "",
-            "urgent": ""
-            },
+      "special": "",
+      "urgent": ""
+    },
     "sort-by-number": true,
     "show-special": true
   },
