@@ -49,13 +49,6 @@ done
 
 git clone https://github.com/folke/lazy.nvim ~/.local/share/nvim/lazy/lazy.nvim
 
-echo "Setting up Configuration files" | tee -a $LOGFILE
-cp -r ~/dotfiles/config/* ~/config 2>>$LOGFILE
-
-echo "Setting up zsh" | tee -a $LOGFILE
-cp ~/dotfiles/config/zshrc ~/.zshrc
-mkdir -p ~/Pictures/Screenshots
-
 echo "Finishing Up!"
 sudo pacman -Syu --noconfirm 2>>$LOGFILE
 yay -Syu --noconfirm tee -a $LOGFILE 2>$1
