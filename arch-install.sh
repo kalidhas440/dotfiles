@@ -47,6 +47,8 @@ for pkg in "${YAY_PACKAGES[@]}"; do
   fi
 done
 
+git clone https://github.com/folke/lazy.nvim ~/.local/share/nvim/lazy/lazy.nvim
+
 echo "Setting up Configuration files" | tee -a $LOGFILE
 cp -r ~/dotfiles/config/* ~/config 2>>$LOGFILE
 
