@@ -59,25 +59,13 @@ require("lazy").setup({
   },
   -- Indent Guides
   {
-	
     "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {},
-  	config = function()
-    	require("indent_blankline").setup {
-        char = "┊", 
-      	show_current_context = true,
-      	show_current_context_start = true,
-        indent = { highlight = highlight, char = "" },
-        whitespace = {
-          highlight = highlight,
-          remove_blankline_trail = false,
-        },
-        scope = { enabled =  false },
-    	}
-  	end
+     config = function()
+       require("ibl").setup ({
+     --  show_current_context = true,
+      -- show_current_context_start = true,
+       })
+     end
    },
    -- Cursorline
    {
