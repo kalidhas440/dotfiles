@@ -35,11 +35,11 @@ output * bg ~/Pictures/Wallpapers/watch-tower-in-red-forest.png fill
 #
 # Example configuration:
 #
-exec swayidle -w \
-    timeout 300 'env XDG_CURRENT_DESKTOP=sway swaylock-fancy -p' &
+#exec swayidle -w \
+#    timeout 300 'env XDG_CURRENT_DESKTOP=sway swaylock-fancy -p' &
 
-exec swayidle -w \
-    timeout 1800 'systemctl suspend'
+#exec swayidle -w \
+#    timeout 1800 'systemctl suspend'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -213,6 +213,9 @@ exec sleep 5 && kdeconnect-indicator
     bindsym ctrl+alt+s exec spotify
     bindsym ctrl+alt+c exec gnome-calculator
 
+#Hypridle
+exec hypridle
+
 #wlogout (logout menu)
 bindsym ctrl+alt+delete exec wlogout
 
@@ -223,7 +226,7 @@ bindsym alt+space exec wofi
 exec --no-startup-id waybar -c ~/.config/waybar/config-sway.jsonc
 
 #Lock Screen
-bindsym $mod+l exec env XDG_CURRENT_DESKTOP=sway swaylock-fancy -p
+bindsym $mod+l exec hyprlock
 
 #NetworkManager-Applet
 exec nm-applet
