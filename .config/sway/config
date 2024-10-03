@@ -23,7 +23,7 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/Wallpapers/watch-tower-in-red-forest.png fill
+output * bg ~/Pictures/Wallpapers/windmill.jpg fill
 #
 # Example configuration:
 #
