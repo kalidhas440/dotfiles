@@ -64,6 +64,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec kitty -c ~/.config/kitty/rkitty.conf
 
     # Kill focused window
     bindsym $mod+Shift+q kill
