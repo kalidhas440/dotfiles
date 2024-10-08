@@ -20,26 +20,47 @@
     "cpu",
     "memory",
     "temperature",
+    "custom/notification",
     "tray",
     "battery",
     "power-profiles-daemon",
     "clock"
   ],
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": " <span foreground='red'><sup></sup></span>",
+      "none": " ",
+      "dnd-notification": " <span foreground='red'><sup></sup></span>",
+      "dnd-none": " ",
+      "inhibited-notification": " <span foreground='red'><sup></sup></span>",
+      "inhibited-none": " ",
+      "dnd-inhibited-notification": " <span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
   "mpris": {
-  "ellipsis": "...",
-	"format": "{player_icon} {player}: {artist} - {title}",
-  "artist-len": 20,
-  "title-len": 30,
-	"format-paused": "{player_icon} {player}: {status}",
-	"player-icons": {
-		"default": "🎵",
-    "spotify":"  "
-	},
-	"status-icons": {
-		"paused": "⏸",
-    "playing": "▶"
-	  }
-	// "ignored-players": ["firefox"]
+    "ellipsis": "...",
+    "format": "{player_icon} {player}: {artist} - {title}",
+    "artist-len": 20,
+    "title-len": 30,
+    "format-paused": "{player_icon} {player}: {status}",
+    "player-icons": {
+      "default": "🎵",
+      "spotify": "  "
+    },
+    "status-icons": {
+      "paused": "⏸",
+      "playing": "▶"
+    }
+    // "ignored-players": ["firefox"]
   },
   "network": {
     "interface": "wlo1",
@@ -76,9 +97,9 @@
             ,
             "active": "",
             "default": "" */
-            "special": "",
-            "urgent": ""
-            },
+      "special": "",
+      "urgent": ""
+    },
     "sort-by-number": true,
     "show-special": true
   },
