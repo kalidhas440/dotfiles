@@ -223,6 +223,10 @@ bindsym ctrl+alt+delete exec wlogout
 #Wofi (application menu)
 bindsym alt+space exec wofi
 
+#Swaync (notification center)
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
 #Waybar (panel)
 exec --no-startup-id waybar -c ~/.config/waybar/config-sway.jsonc
 
