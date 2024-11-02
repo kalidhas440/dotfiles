@@ -244,7 +244,7 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 #Clipboard
     exec copyq
-    bindsym alt+v exec copyq
+    bindsym alt+v exec copyq show
 
 # Functional keys (Adjust for your own system.Use xev to find key name)
     #Birghtness Control
