@@ -1,6 +1,6 @@
 width=500
 height=500
-location=top
+location=center
 show=drun
 prompt=Search...
 filter_rate=100
