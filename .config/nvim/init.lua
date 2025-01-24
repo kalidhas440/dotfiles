@@ -1,6 +1,10 @@
--- init.lua
-require('config.options')
-require('config.keymaps')
-require('config.plugins')
+if vim.loader then
+	vim.loader.enable()
+end
 
-vim.o.wrap = true
+_G.dd = function(...)
+	require("util.debug").dump(...)
+end
+vim.print = _G.dd
+
+require("config.lazy")

@@ -267,17 +267,17 @@
       ]
     }
   },
-  "bar.customModules.cpuTemp.sensor": "/sys/class/thermal/thermal_zone0/temp",
+  "bar.customModules.cpuTemp.sensor": "/sys/class/thermal/thermal_zone4/temp",
   "bar.battery.hideLabelWhenFull": true,
-  "bar.clock.format": "%a %I:%M:%S %p",
+  "bar.clock.format": "%e %a %I:%M:%S %p",
   "menus.clock.weather.key": "c9000f2700d9460daaa33811242111",
   "bar.media.truncation_size": 40,
   "bar.customModules.weather.unit": "metric",
   "bar.customModules.cava.showActiveOnly": true,
-  "bar.customModules.cava.bars": 5,
+  "bar.customModules.cava.bars": 10,
   "bar.customModules.cava.stereo": true,
   "bar.windowtitle.truncation_size": 10,
-  "theme.bar.buttons.modules.cava.spacing": "0.1em",
+  "theme.bar.buttons.modules.cava.spacing": "0.5em",
   "bar.customModules.netstat.label": true,
   "bar.customModules.netstat.labelType": "full",
   "theme.bar.buttons.systray.enableBorder": false,
@@ -295,5 +295,11 @@
   "menus.media.hideAlbum": false,
   "menus.media.hideAuthor": false,
   "bar.media.show_label": true,
-  "bar.media.truncation": true
+  "bar.media.truncation": true,
+  "bar.customModules.netstat.networkInterface": "",
+  "bar.customModules.netstat.round": true,
+  "bar.customModules.cava.spaceCharacter": " ",
+  "menus.volume.raiseMaximumVolume": true,
+  "menus.clock.time.hideSeconds": false,
+  "menus.clock.time.military": false
 }

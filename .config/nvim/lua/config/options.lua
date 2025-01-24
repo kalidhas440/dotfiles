@@ -1,19 +1,47 @@
--- options.lua
-vim.opt.termguicolors = true     -- Enable 24-bit RGB colors
-vim.opt.number = true            -- Show line numbers
-vim.opt.relativenumber = false    -- Relative line numbers
-vim.opt.cursorline = true        -- Highlight the current line
-vim.opt.signcolumn = 'yes'       -- Always show the sign column
-vim.opt.wrap = false             -- No word wrap
-vim.opt.scrolloff = 8            -- Keep 8 lines above/below the cursor
-vim.opt.sidescrolloff = 8
+vim.g.mapleader = " "
 
--- options.lua
-vim.opt.expandtab = true      -- Use spaces instead of tabs
-vim.opt.shiftwidth = 4        -- Number of spaces to use for indentation
-vim.opt.tabstop = 4           -- Number of spaces per tab
-vim.opt.smartindent = true    -- Auto-indent new lines
-vim.opt.autoindent = true     -- Copy indent from the previous line
-vim.opt.wrap = false          -- Disable line wrap
-vim.opt.smartcase = true      -- Smart case search
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
+vim.opt.number = true
+
+vim.opt.title = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.hlsearch = true
+vim.opt.backup = false
+vim.opt.showcmd = true
+vim.opt.cmdheight = 1
+vim.opt.laststatus = 3
+vim.opt.expandtab = true
+vim.opt.scrolloff = 10
+vim.opt.shell = "fish"
+vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
+vim.opt.inccommand = "split"
+vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
+vim.opt.smarttab = true
+vim.opt.breakindent = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.wrap = false -- No Wrap lines
+vim.opt.backspace = { "start", "eol", "indent" }
+vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
+vim.opt.wildignore:append({ "*/node_modules/*" })
+vim.opt.splitbelow = true -- Put new windows below current
+vim.opt.splitright = true -- Put new windows right of current
+vim.opt.splitkeep = "cursor"
+vim.opt.mouse = ""
+
+-- Undercurl
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Ce = "\e[4:0m"]])
+
+-- Add asterisks in block comments
+vim.opt.formatoptions:append({ "r" })
+
+vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
+vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
+
+if vim.fn.has("nvim-0.8") == 1 then
+	vim.opt.cmdheight = 0
+end
