@@ -108,7 +108,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(ssh-agent -s)"
 
 # Created by `pipx` on 2024-08-21 16:25:25
 export PATH="$PATH:/home/kalidhas/.local/bin"
