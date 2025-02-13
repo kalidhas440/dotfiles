@@ -267,7 +267,7 @@
       ]
     }
   },
-  "bar.customModules.cpuTemp.sensor": "/sys/class/thermal/thermal_zone4/temp",
+  "bar.customModules.cpuTemp.sensor": "/sys/class/thermal/thermal_zone6/temp",
   "bar.battery.hideLabelWhenFull": true,
   "bar.clock.format": "%e %a %I:%M:%S %p",
   "menus.clock.weather.key": "c9000f2700d9460daaa33811242111",
