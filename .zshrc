@@ -114,11 +114,3 @@ export PATH="$PATH:/home/kalidhas/.local/bin"
 
 zstyle ':completion:*' menu select
 
-
-# bun completions
-[ -s "/home/kalidhas/.bun/_bun" ] && source "/home/kalidhas/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
