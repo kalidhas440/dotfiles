@@ -114,3 +114,4 @@ export PATH="$PATH:/home/kalidhas/.local/bin"
 
 zstyle ':completion:*' menu select
 
+alias ls="lsd --color=auto"
