@@ -291,7 +291,7 @@
   "wallpaper.pywal": true,
   "wallpaper.image": "/home/kalidhas/Pictures/Wallpapers/alfa.png",
   "theme.matugen": false,
-  "theme.matugen_settings.scheme_type": "fruit-salad",
+  "theme.matugen_settings.scheme_type": "expressive",
   "menus.media.hideAlbum": false,
   "menus.media.hideAuthor": false,
   "bar.media.show_label": true,
@@ -299,7 +299,10 @@
   "bar.customModules.netstat.networkInterface": "",
   "bar.customModules.netstat.round": true,
   "bar.customModules.cava.spaceCharacter": " ",
-  "menus.volume.raiseMaximumVolume": true,
+  "menus.volume.raiseMaximumVolume": false,
   "menus.clock.time.hideSeconds": false,
-  "menus.clock.time.military": false
+  "menus.clock.time.military": false,
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.variation": "standard_1",
+  "wallpaper.enable": true
 }

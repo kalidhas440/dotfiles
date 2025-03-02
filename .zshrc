@@ -115,3 +115,6 @@ export PATH="$PATH:/home/kalidhas/.local/bin"
 zstyle ':completion:*' menu select
 
 alias ls="lsd --color=auto"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
