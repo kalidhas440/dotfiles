@@ -1,9 +1,9 @@
-#!/bin/bash
+!/bin/bash
 # Arch-based system
 
 LOGFILE="install_log.txt"
 FAILED_PACKAGES="failed_packages.txt"
-PACKAGES=("stow" "sway" "swaybg" "swaylock" "swayidle" "hyprland" "tmux" "llvm" "hyprlock" "hypridle" "kitty" "filelight" "thunar" "thunar-archive-plugin" "thunar-vcs-plugin thunar-volman"  "vlc" "rhythmbox" "tree" "shotwell" "flameshot" "mpv" "gnome-disk-utility" "kdeconnect" "file-roller" "evince" "git" "base-devel" "zsh" "waybar" "swaync" "wofi" "copyq" "bluez" "bluez-utils" "brightnessctl" "clang" "cmake" "dmidecode" "fzf" "zoxide" "starship" "gedit" "nano" "neovim" "htop" "bpytop" "gnome-keyring" "go" "man-db" "neofetch" "mariadb" "nethogs" "networkmanager" "network-manager-applet" "nodejs" "npm" "ntfs-3g" "nwg-look" "openssh" "polkit-gnome" "python-pip" "rustup" "slurp" "sshfs" "subversion" "unzip" "ttf-fonts-awesome" "ttf-nerd-fonts-symbols" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "cmus" "udisks2" "wget" "curl" "wl-clipboard" "wlroots" "xdg-desktop-portal-wlr" "elisa" "papirus-icon-theme" "gnome-calculator" "noto-font-emoji" "man-db" "gdb" )
+PACKAGES=("stow" "sway" "swaybg" "hyprland" "tmux" "llvm" "hyprlock" "hypridle" "kitty" "filelight" "thunar" "thunar-archive-plugin" "thunar-vcs-plugin thunar-volman"  "vlc" "rhythmbox" "tree" "shotwell" "flameshot" "mpv" "gnome-disk-utility" "kdeconnect" "file-roller" "evince" "git" "base-devel" "zsh" "waybar" "swaync" "wofi" "wofi-emoji" "copyq" "bluez" "bluez-utils" "brightnessctl" "clang" "cmake" "dmidecode" "fzf" "zoxide" "starship" "gedit" "nano" "neovim" "htop" "bpytop" "gnome-keyring" "go" "man-db" "neofetch" "mariadb" "nethogs" "networkmanager" "network-manager-applet" "nodejs" "npm" "ntfs-3g" "nwg-look" "openssh" "polkit-gnome" "python-pip" "rustup" "slurp" "sshfs" "subversion" "unzip" "ttf-fonts-awesome" "ttf-nerd-fonts-symbols" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "cmus" "udisks2" "wget" "curl" "wl-clipboard" "wlroots" "xdg-desktop-portal-wlr" "elisa" "papirus-icon-theme" "gnome-calculator" "noto-font-emoji" "man-db" "gdb" "cheese" "" )
 
 echo "Listed Applications, utilities, and yay will be installed and config files will be set up automatically" | tee $LOGFILE
 
@@ -39,7 +39,7 @@ echo "Updatin yay" | tee -a $LOGFILE
 yay -Syu --noconfirm tee -a $LOGFILE 2>$
 
 echo "Installing packages from yay" | tee -a $LOGFILE
-YAY_PACKAGES=("brave-bin" "visual-studio-code-bin" "spotify" "telegram-desktop" "wlogout" "cava" "waypaper" "swaylock-fancy-git" "zed" )
+YAY_PACKAGES=("brave-bin" "visual-studio-code-bin" "spotify" "telegram-desktop" "wlogout" "cava" "waypaper" "zed" "ags-hyprland-git" "ani-cli" )
 
 for pkg in "${YAY_PACKAGES[@]}"; do
   if ! yay -S --noconfirm $pkg 2>>$LOGFILE; then

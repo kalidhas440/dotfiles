@@ -148,12 +148,12 @@ require("lazy").setup({
 
 -- General settings
 vim.o.number = true
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
-vim.o.wrap = false
+vim.o.wrap = true
 vim.o.mouse = "a"
 vim.o.clipboard = "unnamedplus"
 vim.o.splitbelow = true
@@ -181,4 +181,3 @@ map("n", "<S-l>", ":bnext<CR>", opts)
 map("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Toggle terminal
-map("n", "<leader>t", ":ToggleTerm<CR>", opts)
