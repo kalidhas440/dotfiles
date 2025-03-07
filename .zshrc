@@ -70,7 +70,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+        git
+        zsh-autosuggestions
+    )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,12 +109,13 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-# Created by `pipx` on 2024-08-21 16:25:25
-export PATH="$PATH:/home/kalidhas/.local/bin"
-
-zstyle ':completion:*' menu select
-
 alias ls="lsd --color=auto"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-search expand-or-complete accept-line push-line-or-edit)
+
+
+#autoload -Uz compinit && compinit
+#fpath=(/usr/share/zsh/site-functions $fpath)
