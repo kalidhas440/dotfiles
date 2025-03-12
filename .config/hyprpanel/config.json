@@ -188,8 +188,8 @@
     }
   ],
   "bar.customModules.updates.pollingInterval": 1440000,
-  "tear": false,
-  "scalingPriority": "gdk",
+  "tear": true,
+  "scalingPriority": "hyprland",
   "theme.bar.scaling": 95,
   "theme.bar.floating": false,
   "theme.bar.buttons.enableBorders": true,
@@ -202,8 +202,8 @@
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.showApplicationIcons": false,
   "bar.workspaces.workspaceMask": false,
-  "bar.workspaces.show_icons": false,
-  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.show_icons": true,
+  "bar.workspaces.show_numbered": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
   "bar.workspaces.workspaces": 1,
   "bar.workspaces.ignored": "",
@@ -304,5 +304,15 @@
   "menus.clock.time.military": false,
   "theme.matugen_settings.mode": "dark",
   "theme.matugen_settings.variation": "standard_1",
-  "wallpaper.enable": true
+  "wallpaper.enable": true,
+  "theme.bar.menus.enableShadow": true,
+  "theme.bar.location": "top",
+  "bar.autoHide": "never",
+  "theme.bar.border.location": "none",
+  "theme.bar.enableShadow": false,
+  "theme.bar.layer": "top",
+  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.applicationIconOncePerWorkspace": true,
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.workspaces.showAllActive": true
 }
