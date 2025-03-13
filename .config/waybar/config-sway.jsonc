@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
-        "wlr/taskbar",
+        //"wlr/taskbar",
         "network"
     ],
     "modules-center": [
@@ -64,7 +64,7 @@
         // "ignored-players": ["firefox"]
     },
     "network": {
-        "interface": "wlo1",
+        "interface": "wlan0",
         "format": "{ifname}",
         "format-wifi": " ({signalStrength}%) {bandwidthDownBytes}↓↑{bandwidthUpBytes} ",
         "interval": 3,
