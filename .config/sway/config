@@ -217,6 +217,9 @@ exec sleep 5 && kdeconnect-indicator
 #Hypridle
 exec hypridle
 
+#Restore Brave Sessions
+exec ~/scripts/restore_brave_sessions.sh
+
 #wlogout (logout menu)
 bindsym ctrl+alt+delete exec wlogout
 
