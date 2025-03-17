@@ -51,7 +51,7 @@
         "ellipsis": "...",
         "format": "{player_icon} {player}: {artist} - {title}",
         "artist-len": 20,
-        "title-len": 30,
+        "title-len": 25,
         "format-paused": "{player_icon} {player}: {status}",
         "player-icons": {
             "default": "🎵",
