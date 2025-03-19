@@ -252,12 +252,12 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Functional keys (Adjust for your own system.Use xev to find key name)
     #Birghtness Control
-    bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
-    bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
+    bindsym XF86MonBrightnessUp exec brightnessctl s +5% && ~/scripts/brightness_osd.sh 
+    bindsym XF86MonBrightnessDown exec brightnessctl s 5%- && ~/scripts/brightness_osd.sh
 
     #Volume Control
-    bindsym XF86AudioRaiseVolume exec pamixer --increase 5
-    bindsym XF86AudioLowerVolume exec pamixer --decrease 5
+    bindsym XF86AudioRaiseVolume exec pamixer --increase 5 && ~/scripts/volume_osd.sh
+    bindsym XF86AudioLowerVolume exec pamixer --decrease 5 && ~/scripts/volume_osd.sh
 
     #Mute
     bindsym XF86AudioMute exec pamixer --toggle-mute

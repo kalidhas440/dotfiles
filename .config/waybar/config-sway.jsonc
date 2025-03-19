@@ -16,9 +16,6 @@
     "modules-right": [
         "sway/scratchpad",
         "idle_inhibitor",
-        "pulseaudio",
-        "backlight",
-        "cpu",
         "memory",
         "temperature",
         "custom/notification",

@@ -1,68 +1,135 @@
+
+/* General Styles */
 * {
     border: none;
     border-radius: 0;
-}
-
-window#waybar {
-    font-family: Hack Nerd Font;
+    font-family: "Hack Nerd Font";
     font-size: 15px;
-    color: #fbf1c7;
-    background:  rgba(40,40,40,0.9);
+    color: #d8dee9;
 }
 
+/* Waybar Window */
+window#waybar {
+    background: rgba(30, 30, 46, 0.85); /* Hyprland dark theme */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Workspaces */
 #workspaces button {
-    color: #928374;
-    padding: 0 5px;
+    color: #a6adc8;
+    padding: 3px 6px;
     background: transparent;
-    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.visible {
-    color: #fbf1c7;
-    background: #282828;
-    border-bottom: 1px solid transparent;
+    color: #cdd6f4;
+    background: #313244;
 }
 
 #workspaces button.focused {
-    color: #fbf1c7;
-    background: #282828;
-    border-bottom: 1px solid #fbf1c7;
+    color: #1e1e2e;
+    background: #89b4fa;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-#clock {
-    padding-right: 5px;
+/* Modules */
+#clock, #pulseaudio, #backlight, #battery, #cpu, #memory, #temperature, #network, #idle_inhibitor, #power-profiles-daemon, #custom-notification, #tray {
+    padding: 2px 5px;
+    margin: 0px;
+    border-radius: 6px;
+    background: #1e1e2e;
+    transition: background 0.3s ease-in-out;
 }
 
-#pulseaudio, #backlight, #battery, #cpu {
-    padding-right: 5px;
-    margin: 0;
-}
 #network {
-   padding-right: 10px; 
-   margin: 0;
+    color: #89b4fa;
+    background: #313244;
+    border-radius: 8px;
 }
 
-#clock {
-    border-right: none;
+#battery {
+    color: #a6e3a1;
+    background: #2a3a25;
+    border-radius: 8px;
 }
 
+#cpu {
+    color: #f9e2af;
+    background: #3f2f1e;
+    border-radius: 8px;
+}
+
+#memory {
+    color: #fab387;
+    background: #382923;
+    border-radius: 8px;
+}
+
+#temperature {
+    color: #f38ba8;
+    background: #402733;
+    border-radius: 8px;
+}
+
+#idle_inhibitor {
+    color: #f5c2e7;
+    background: #3a2b3d;
+    border-radius: 8px;
+}
+
+#power-profiles-daemon {
+    color: #cba6f7;
+    background: #322c49;
+    border-radius: 8px;
+}
+
+#custom-notification {
+    color: #94e2d5;
+    background: #26403f;
+    border-radius: 8px;
+}
+
+/* MPRIS (Middle Module) - Special Styling */
+#mpris {
+    padding: 5px 12px;
+    margin: 2px 10px;
+    background: #313244;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #cdd6f4;
+    transition: background 0.3s ease-in-out;
+}
+
+#mpris.playing {
+    background: #a6e3a1; /* Green when playing */
+    color: #1e1e2e;
+}
+
+#mpris.paused {
+    background: #fab387; /* Orange when paused */
+    color: #1e1e2e;
+}
+
+#mpris.stopped {
+    background: #f38ba8; /* Red when stopped */
+    color: #1e1e2e;
+}
+
+/* Mode Indicator */
 #mode {
-    padding: 0 10px 0 10px;
-    background: #cc241d;
+    padding: 3px 8px;
+    background: #f38ba8;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-#window {
-  border-right: 20px; 
-  border-left: 0px;
-}
-
-#network1 {
-  min-width: 150px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
+/* System Tray */
 #tray {
-  color: #fbf1c7;
-  background: #282828;	
+    background: #181825;
+    padding: 2px 5px;
+    border-radius: 6px;
 }
