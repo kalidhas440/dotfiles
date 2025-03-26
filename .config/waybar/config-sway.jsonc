@@ -18,7 +18,7 @@
         "idle_inhibitor",
         "memory",
         "temperature",
-        "custom/notification",
+        //"custom/notification",
         "tray",
         "battery",
         "power-profiles-daemon",
