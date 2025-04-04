@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
+# Note: pass the final comman to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
@@ -83,7 +83,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -219,7 +219,7 @@ exec brave --restore-last-session
 exec zen-browser
 
 #wlogout (logout menu)
-bindsym ctrl+alt+delete exec wlogout
+bindsym $mod+Shift+e exec wlogout
 
 #Wofi (application menu)
 bindsym alt+space exec wofi
