@@ -37,7 +37,7 @@ window#waybar {
 }
 
 /* Modules */
-#clock, #pulseaudio, #backlight, #battery, #cpu, #memory, #temperature, #network, #idle_inhibitor, #power-profiles-daemon, #custom-notification, #tray {
+#clock, #pulseaudio, #backlight, #battery, #cpu, #memory, #temperature, #network, #idle_inhibitor, #custom-mic, #power-profiles-daemon, #custom-notification, #tray {
     padding: 2px 5px;
     margin: 0px;
     border-radius: 6px;
@@ -93,6 +93,14 @@ window#waybar {
     border-radius: 8px;
 }
 
+#custom-mic.muted {
+    color: #94e2d5;
+}
+
+#custom-mic.unmuted {
+    color: #50fa7b;
+}
+    
 /* MPRIS (Middle Module) - Special Styling */
 #mpris {
     padding: 5px 12px;

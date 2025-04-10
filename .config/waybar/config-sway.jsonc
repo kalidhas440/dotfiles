@@ -15,6 +15,7 @@
     ],
     "modules-right": [
         "sway/scratchpad",
+        "custom/mic",
         "idle_inhibitor",
         "memory",
         "temperature",
@@ -24,6 +25,12 @@
         "power-profiles-daemon",
         "clock"
     ],
+    "custom/mic": {
+        "exec": "$HOME/.config/waybar/scripts/mic-status.sh",
+        "interval": 3,
+        "on-click": "$HOME/.config/waybar/scripts/mic-toggle.sh",
+        "format": "{}"
+    },
     "custom/notification": {
         "tooltip": false,
         "format": "{icon}",
