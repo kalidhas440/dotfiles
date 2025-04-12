@@ -241,7 +241,7 @@ bindsym $mod+l exec hyprlock
 exec nm-applet
 
 #Gnome-keyring
-exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,gpg
+#exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,gpg
 
 #Polkit
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

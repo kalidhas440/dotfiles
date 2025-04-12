@@ -15,8 +15,9 @@
   ],
   "modules-right": [
     "idle_inhibitor",
-    "pulseaudio",
-    "backlight",
+    "custom/mic",
+    //"pulseaudio",
+    //"backlight",
     "cpu",
     "memory",
     "temperature",
@@ -26,6 +27,12 @@
     "power-profiles-daemon",
     "clock"
   ],
+  "custom/mic": {
+        "exec": "$HOME/.config/waybar/scripts/mic-status.sh",
+        "interval": 3,
+        "on-click": "$HOME/.config/waybar/scripts/mic-toggle.sh",
+        "format": "{}"
+  },
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
