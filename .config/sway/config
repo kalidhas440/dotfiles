@@ -215,8 +215,8 @@ exec sleep 5 && kdeconnect-indicator
 exec hypridle
 
 #Restore Brave Sessions
-#exec brave --restore-last-session
-exec zen-browser
+exec brave --restore-last-session
+#exec zen-browser
 
 #wlogout (logout menu)
 bindsym $mod+Shift+e exec wlogout
