@@ -70,7 +70,7 @@
     // "ignored-players": ["firefox"]
   },
   "network": {
-    "interface": "wlo1",
+    "interface": "wlan0",
     "format": "{ifname}",
     "format-wifi": " ({signalStrength}%) {bandwidthDownBytes}↓↑{bandwidthUpBytes} ",
     "interval": 3,
