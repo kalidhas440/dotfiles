@@ -223,6 +223,7 @@ bindsym $mod+Shift+e exec wlogout
 
 #Wofi (application menu)
 bindsym alt+space exec wofi
+bindsym alt+Return exec wofi --show run
 
 #Swaync (notification center)
 #exec swaync

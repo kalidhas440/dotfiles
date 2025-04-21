@@ -1,0 +1,116 @@
+# Converted i3 Config from Sway
+# Place in ~/.config/i3/config
+
+# Set mod key (Mod4 = Super/Windows key)
+set $mod Mod4
+set $term kitty
+set $menu rofi -show drun
+
+# Autostart processes
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/neon-girl-specs.png
+exec_always --no-startup-id xss-lock -- i3lock -c 000000
+exec_always --no-startup-id xset s 300 300
+exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 0
+
+# KDE Connect
+exec_always --no-startup-id sh -c "sleep 5 && kdeconnect-indicator"
+
+# Hypridle (if compatible with X11)
+exec_always --no-startup-id hypridle
+
+# Brave decode issue script
+exec_always --no-startup-id $HOME/scripts/brave_decode_issue.sh
+
+# Wlogout (logout menu)
+bindsym $mod+Shift+e exec wlogout
+
+# Application launcher (Wofi alternative in X11 would be rofi)
+bindsym Mod1+space exec rofi -show drun
+
+# Notifications (using dunst for X11)
+exec_always --no-startup-id dunst
+
+# Waybar (panel)
+exec_always --no-startup-id waybar -c ~/.config/waybar/config-sway.jsonc
+
+# Lock Screen (using i3lock for X11)
+bindsym $mod+l exec i3lock -c 000000
+
+# NetworkManager Applet
+exec_always --no-startup-id nm-applet
+
+# Gnome-keyring
+exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets,ssh,gpg
+
+# Polkit
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Clipboard manager
+exec_always --no-startup-id copyq
+bindsym Mod1+v exec copyq show
+
+# Brightness Control
+bindsym XF86MonBrightnessUp exec brightnessctl s +5% && ~/scripts/brightness_osd.sh
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%- && ~/scripts/brightness_osd.sh
+
+# Volume Control
+bindsym XF86AudioRaiseVolume exec pamixer --increase 5 && ~/scripts/volume_osd.sh
+bindsym XF86AudioLowerVolume exec pamixer --decrease 5 && ~/scripts/volume_osd.sh
+
+# Mute
+bindsym XF86AudioMute exec pamixer --toggle-mute
+
+# Screenshot (flameshot for X11)
+bindsym Print exec flameshot screen
+bindsym Shift+Print exec flameshot gui
+
+# Disable title bars
+for_window [class="^.*"] border pixel 1
+
+# Basic keybindings
+bindsym $mod+Return exec $term
+bindsym $mod+d exec $menu
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exit
+
+# Workspace switching
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+
+# Layout control
+bindsym $mod+f fullscreen toggle
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Focus movement (vim style)
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Moving windows
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Floating toggle
+bindsym $mod+Shift+space floating toggle
+
+# Reload i3 config
+bindsym $mod+Shift+c reload
+
+# Exit i3 session
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg exit'"
