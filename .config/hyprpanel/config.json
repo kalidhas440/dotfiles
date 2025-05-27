@@ -314,5 +314,8 @@
   "bar.workspaces.monitorSpecific": false,
   "bar.workspaces.applicationIconOncePerWorkspace": false,
   "theme.bar.buttons.workspaces.smartHighlight": true,
-  "bar.workspaces.showAllActive": true
+  "bar.workspaces.showAllActive": true,
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }
