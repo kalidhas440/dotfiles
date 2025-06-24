@@ -1,0 +1,5 @@
+dysk -> terminal tool for disk overview
+lsd -> better alternative for ls
+zoxide -> better alternative for cd
+fzf -> fuzzy finder
+

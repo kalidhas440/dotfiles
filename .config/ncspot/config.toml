@@ -8,6 +8,9 @@ gapless = true
 flip_status_indicators=true
 shuffle = false
 repeat = 'off'
+show_cover = true
+cover_cache_backend = "viu"
+
 
 [keybindings]
 ## unbinded: nN, c, eE, xX
