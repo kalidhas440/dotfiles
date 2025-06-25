@@ -1,9 +1,8 @@
 #!/bin/bash
-SOURCE_ID=55
 
-if wpctl get-volume "$SOURCE_ID" | grep -q MUTED; then
-    echo " "
+if pactl get-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo | grep -q "yes"; then
+    echo " "  # Muted
 else
-    echo ""
+    echo ""  # Unmuted
 fi
 

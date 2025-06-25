@@ -1,4 +1,2 @@
 #!/bin/bash
-SOURCE_ID=55
-wpctl set-mute "$SOURCE_ID" toggle
-
+pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo toggle
