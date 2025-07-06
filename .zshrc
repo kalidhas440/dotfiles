@@ -110,6 +110,8 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 alias ls="lsd --color=auto"
+alias obsidian="$HOME/launch_obsidian.sh"
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
