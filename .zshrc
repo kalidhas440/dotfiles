@@ -117,3 +117,14 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-search expand-or-complete accept-line push-line-or-edit)
 
+# Only show fastfetch in the first Kitty window
+if [[ "$TERM" == *kitty* ]]; then
+    LOCKFILE="/tmp/.fastfetch_lock"
+
+    if [ ! -f "$LOCKFILE" ]; then
+        fastfetch
+        touch "$LOCKFILE"
+        trap 'rm -f "$LOCKFILE"' EXIT
+    fi
+fi
+
