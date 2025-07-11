@@ -1,55 +1,43 @@
 window {
-    margin: 5px;
-    border: 0px solid #444444;
-    background-color: rgba(0, 0, 0, 0.0);
-    /* opacity: 1; */
-    font-family: FontAwesome;
+  background-color: #171717;
 }
 
-@keyframes erscheinen {
-    from {opacity: 0;}
-      to {opacity: 1;}
-}
-
-#input {
-    margin: 0px 0px 5px;
-    border: 5px solid #b58900;
-    background-color: rgb(7, 54, 66);
-    border-radius: 20px;
-    color : #fdf6e3;
-}
-
-#inner-box {
-    margin: 0px;
-    border: 0px solid #444444;
-    background-color: rgba(68, 68, 68, 0.0);
-}
-
-/* #inner-box flowboxchild:nth-child(even) { */
-/*     background-color: #555555; */
-/* } */
-
-#outer-box {
-    margin: 0px;
-    border: 0px solid rgb(203, 75, 22);
-    background-color: rgba(0, 0, 0, 0.0);
+* {
+  font-family: "Jetbrains Mono Nerd Font";
+  color: #fff;
 }
 
 #scroll {
-    margin: 0px;
-    border: 5px solid #586e75;
-    border-radius: 0px;
-    background-color: rgba(7, 54, 66, 0.9);
-    /* animation: erscheinen 0.3s linear; */
+  padding: 0.5rem;
 }
 
-#text {
-    margin: 1px;
-    border: 0px solid #44AA44;
-    /* background-color: #444444; */
-    color: #FFFFFF;
+#input {
+  background-color: #262626;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-#selected {
-    background-color: rgb(76, 162, 223);
+#inner-box {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+#img {
+  margin: 10px 10px;
+}
+
+#entry {
+  border-radius: 0.5rem;
+}
+
+#entry:selected {
+  background-color: #262626;
+  outline: none;
 }
