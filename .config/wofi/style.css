@@ -38,6 +38,6 @@ window {
 }
 
 #entry:selected {
-  background-color: #262626;
+  background-color: none;
   outline: none;
 }
