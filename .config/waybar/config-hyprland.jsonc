@@ -21,12 +21,19 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/notification",
     "tray",
+    "custom/notification",
     "battery",
     "power-profiles-daemon",
     "clock"
   ],
+  
+  "swaync": {
+    "tooltip": false,
+    "format": " {count}",
+    "on-click": "swaync-client -t"  // toggles notification centre
+  },
+
   "custom/mic": {
         "exec": "$HOME/.config/waybar/scripts/mic-status.sh",
         "interval": 3,
