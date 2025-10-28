@@ -75,6 +75,22 @@
       "image-size": 96,
       "image-radius": 12
     },
+  "rules": [
+    {
+      "app-name": "osd",   // matches if your script uses -a osd
+      "ignore": true,
+      "popup": true        // still shows popup
+    },
+    {
+      "summary": "Volume*",  // wildcard match not supported, use exact if needed
+      "ignore": true
+    },
+    {
+      "summary": "Brightness*",
+      "ignore": true
+    }
+    ]
+
     "buttons-grid": {
       "actions": [
         {
@@ -87,4 +103,4 @@
       ]
     }
   }
-}
+a

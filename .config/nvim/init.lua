@@ -114,14 +114,33 @@ require("lazy").setup({
   },
 
   -- Colorscheme
+  --{
+    --"gruvbox-community/gruvbox",
+    --config = function()
+      --vim.cmd("colorscheme gruvbox")
+    --end,
+  --},
+
+  -- Transparent Colorscheme
   {
-    "gruvbox-community/gruvbox",
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
     config = function()
-      vim.cmd("colorscheme gruvbox")
+      require("tokyonight").setup({
+        style = "night",          -- or "storm", "moon", "day"
+        transparent = true,       -- enables transparency
+        terminal_colors = true,   -- use theme colours in terminal
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
+      })
+      vim.cmd("colorscheme tokyonight")
     end,
   },
-
-  -- Terminal integration
+  
+    -- Terminal integration
   {
     "akinsho/toggleterm.nvim",
     config = function()
