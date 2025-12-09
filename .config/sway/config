@@ -23,7 +23,7 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-  output * bg ~/Pictures/Wallpapers/neon-girl-specs.png fill
+  output * bg ~/Pictures/Wallpapers/goth_girl_anime_reading_book.png fill
 #
 # Example configuration:
 #
@@ -226,8 +226,8 @@ bindsym alt+space exec wofi
 bindsym alt+Return exec wofi --show run
 
 #Swaync (notification center)
-#exec swaync
-#bindsym $mod+Shift+n exec swaync-client -t -sw
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 #Mako notification
 exec mako
