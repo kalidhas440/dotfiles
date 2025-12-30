@@ -77,11 +77,11 @@
     // "ignored-players": ["firefox"]
   },
   "network": {
-    "interface": "wlan0",
+    //"interface": "wlo1",
     "format": "{ifname}",
     "format-wifi": " ({signalStrength}%) {bandwidthDownBytes}↓↑{bandwidthUpBytes} ",
     "interval": 3,
-    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-ethernet": "󰊗 {bandwidthDownBytes}↓↑{bandwidthUpBytes}",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
