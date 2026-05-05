@@ -7,17 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "ui_font_weight": 500.0,
-  "terminal": {
-    "font_family": "JetBrainsMono Nerd Font",
-    "font_size": 20.0
-  },
-  "prettier": {
-    "allowed": true
-  },
-  "edit_predictions": {
-    "provider": "none"
-  },
   "project_panel": {
     "dock": "right"
   },
@@ -34,8 +23,8 @@
     "enable_preview_from_multibuffer": false
   },
   "title_bar": {
-    "show_branch_status_icon": true,
-    "show_menus": false
+    "show_menus": false,
+    "show_branch_icon": true
   },
   "tab_bar": {
     "show": true
@@ -55,10 +44,13 @@
     "button": false,
     "single_file_review": true
   },
-  "ui_font_family": "JetBrainsMonoNL Nerd Font Propo",
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMonoNL Nerd Font",
-  "ui_font_size": 15.0,
-  "buffer_font_size": 17.0,
+  "ui_font_size": 16,
+  "buffer_font_size": 25.0,
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
