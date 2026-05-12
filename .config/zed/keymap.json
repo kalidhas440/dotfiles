@@ -4,5 +4,23 @@
     "bindings": {
       "ctrl-alt-n": ["task::Spawn", { "task_name": "run file" }]
     }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "f1": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "f1": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-p": "command_palette::Toggle"
+    }
   }
 ]
