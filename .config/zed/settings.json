@@ -60,9 +60,9 @@
   "ui_font_size": 15.0,
   "buffer_font_size": 17.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Ayu Dark"
+    "dark": "One Dark"
   },
   "autosave": {
     "after_delay": {
