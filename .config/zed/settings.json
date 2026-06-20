@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "git": {
+    "disable_git": true
+  },
+  "disable_ai": true,
+  "icon_theme": "Zed (Default)",
   "ui_font_weight": 500.0,
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font",
@@ -22,10 +27,10 @@
     "dock": "right"
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "right"
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "right"
   },
   "bottom_dock_layout": "contained",
   "preview_tabs": {
@@ -45,13 +50,13 @@
     "file_icons": true
   },
   "collaboration_panel": {
-    "dock": "left",
+    "dock": "right",
     "button": false
   },
   "base_keymap": "VSCode",
   "soft_wrap": "editor_width",
   "agent": {
-    "dock": "right",
+    "dock": "left",
     "button": false,
     "single_file_review": true
   },
@@ -62,7 +67,7 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "One Dark"
+    "dark": "Tokyo Night Storm"
   },
   "autosave": {
     "after_delay": {
