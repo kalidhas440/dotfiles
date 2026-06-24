@@ -3,4 +3,4 @@ lsd -> better alternative for ls
 zoxide -> better alternative for cd
 fzf -> fuzzy finder
 viu ->cli image viewer
-
+gnu stow -> symbolic link manager
