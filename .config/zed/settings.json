@@ -24,7 +24,7 @@
     "provider": "none"
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "left"
   },
   "outline_panel": {
     "dock": "right"
