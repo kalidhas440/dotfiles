@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "debugger": {
+    "dock": "right"
+  },
   "git": {
     "disable_git": true
   },
