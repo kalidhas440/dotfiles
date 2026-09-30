@@ -126,5 +126,4 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste up-line-or-search down-line-or-s
 #        touch "$LOCKFILE"
 #        trap 'rm -f "$LOCKFILE"' EXIT
 #    fi
-#fi  
-
+#fi 
