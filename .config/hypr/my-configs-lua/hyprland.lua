@@ -1,5 +1,5 @@
 -- Initialize the Hyprland API core binding
-local hl = require("hl")
+--local hl = require("hl")
 
 -- Import your sub-configurations (Order matters!)
 -- 1. Setup system environments first

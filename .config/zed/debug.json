@@ -4,5 +4,18 @@
     "adapter": "CodeLLDB",
     "request": "launch",
     "program": "$ZED_WORKTREE_ROOT/a.out",
+  },
+
+  {
+    "label": "Python (unbuffered)",
+    "adapter": "Debugpy",
+    "timeout": 1000,
+    "log_dap_communications": true,
+    "request": "launch",
+    "program": "$ZED_FILE",
+    "console": "integratedTerminal",
+    "env": {
+      "PYTHONUNBUFFERED": "1"
+    }
   }
 ]

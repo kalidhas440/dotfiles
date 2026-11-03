@@ -1,6 +1,3 @@
--- Initialize the Hyprland API core binding
-local hl = require("hl")
-
 -- Import your sub-configurations (Order matters!)
 -- 1. Setup system environments first
 require("my-configs-lua.env-variables")

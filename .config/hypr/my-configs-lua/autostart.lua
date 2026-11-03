@@ -1,4 +1,4 @@
-local hl = require("hl")
+--local hl = require("hl")
 
 -- Autostart
 hl.on("hyprland.start", function()
