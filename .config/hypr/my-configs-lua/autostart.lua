@@ -23,5 +23,5 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("rclone mount EComp_Gdrive:" .. os.getenv("HOME") .. "/EComp_Gdrive --vfs-cache-mode writes --vfs-cache-max-size 2G")
 
     -- 5. User Applications
-    hl.exec_cmd("brave-browser")
+    hl.exec_cmd("brave-browser --media-cache-size=15728640 --disable-features=Av1Decoder")
 end)

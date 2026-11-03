@@ -9,6 +9,7 @@ require("my-configs-lua.looknfeel")
 -- 3. Layout, Window rules, and Keybindings
 require("my-configs-lua.windows-workspaces")
 require("my-configs-lua.keybindings")
+require("keybindings-waybar")
 
 -- 4. Launch your autostart apps last
 require("my-configs-lua.autostart")
