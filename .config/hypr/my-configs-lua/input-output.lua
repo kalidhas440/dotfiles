@@ -50,17 +50,17 @@ hl.config({
         -- -1.0 - 1.0, 0 means no modification.
         touchpad = {
             natural_scroll = false,
-            disable_while_typing = false,
+            disable_while_typing = true,
         },
     },
 })
 
 -- https://wiki.hyprland.org/Configuring/Variables/#gestures
 
-hl.config({
-    gestures = {
-        --workspace_swipe = true
-    },
+hl.gesture({
+    fingers = 3,
+    direction = "horizontal",
+    action = "workspace",
 })
 
 -- Example per-device config
