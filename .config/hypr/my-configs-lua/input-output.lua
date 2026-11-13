@@ -50,7 +50,7 @@ hl.config({
         -- -1.0 - 1.0, 0 means no modification.
         touchpad = {
             natural_scroll = false,
-            disable_while_typing = true,
+            disable_while_typing = false,
         },
     },
 })
